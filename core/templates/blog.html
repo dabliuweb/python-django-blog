@@ -1,0 +1,59 @@
+{% extends 'main.html' %}
+
+{% block style %}
+<style>
+    h1{
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    h2{
+      font-size: 1.2rem;
+    }
+
+    .list-group li{
+      min-height:58px;
+    }
+</style>
+{% endblock style %}
+
+{% block title %}Blog{% endblock %}
+
+{% block content %}
+
+<div class="row">
+    <div class="col-12 col-md-6">
+        <section id="posts">
+            <h1>Todos os posts</h1>
+        
+            <ul class="list-group">
+                {% for post in posts %}
+                    <li class="list-group-item">
+                        <a class="text-decoration-none link-body-emphasis" href="{% url 'post' post.id %}">
+                            <h2>{{ post.title }}</h2>
+                        </a>
+                        {% for tag in post.tags.all %}
+                            <span class="badge text-bg-primary">{{ tag.name }}</span>
+                        {% endfor %}
+                    </li>
+                {% endfor %}
+              </ul>
+        </section>
+    </div>
+    <div class="col-12 col-md-6">
+        <section id="tags" class="mt-4 mt-md-0">
+            <h1>Todos as tags</h1>
+        
+            <ul class="list-group">
+                <li class="list-group-item">
+                    {% for tag in tags %}
+                        <span class="badge text-bg-primary">{{ tag.name }}</span>
+                    {% endfor %}
+                </li>
+              </ul>
+        </section>
+    </div>
+</div>
+    
+
+{% endblock content %}
