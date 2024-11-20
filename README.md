@@ -61,6 +61,13 @@ Rode o comando abaixo para que o usuário padrão seja aplicado ao banco de dado
 python create_superuser.py
 ```
 
+#### Acesso ao painel administrativo do Django
+
+Após criar o superusuário, utilize as seguintes credenciais para acessar o painel administrativo:
+
+- **Username**: `admin`
+- **Senha**: `admin`
+
 ### 6. Executar o servidor
 
 Agora, você pode iniciar o servidor de desenvolvimento local com o comando:
@@ -70,6 +77,10 @@ python manage.py runserver
 ```
 
 O servidor estará disponível em `http://127.0.0.1:8000/`.
+
+Para acessar o painel administrativo do Django, utilize o link:
+
+- `http://127.0.0.1:8000/admin`
 
 ## Estrutura do Projeto
 
