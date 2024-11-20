@@ -73,10 +73,8 @@ O servidor estará disponível em `http://127.0.0.1:8000/`.
 
 ## Estrutura do Projeto
 
-- `core/` - Contém a lógica principal do blog, como modelos e views.
-- `blog/` - Interface do blog com templates, controle de exibição de posts e rotas.
-- `templates/` - Contém os templates HTML do projeto.
-- `static/` - Contém arquivos estáticos como CSS, JavaScript, imagens, etc.
+- `core/` - Interface do app 'core' com templates, controle de exibição de posts e rotas.
+- `blog/` - Contém a configuração principal (geral) do projeto.
 
 ## License
 
