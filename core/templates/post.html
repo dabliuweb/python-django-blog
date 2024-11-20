@@ -38,13 +38,13 @@
 
       <nav class="blog-pagination" aria-label="Pagination"> 
         {% if previous_post.id > 0 %}
-            <a class="btn btn-outline-primary rounded-pill" href="{% url 'post' previous_post.id %}">Anterior</a>
+            <a class="btn btn-outline-primary rounded-pill" href="{% url 'blog/post' previous_post.id %}">Anterior</a>
         {% else %}
             <a class="btn btn-outline-primary rounded-pill disabled" aria-disabled="true">Anterior</a>
         {% endif %}
     
         {% if next_post.id %}
-            <a class="btn btn-outline-secondary rounded-pill" href="{% url 'post' next_post.id %}">Próximo</a>
+            <a class="btn btn-outline-secondary rounded-pill" href="{% url 'blog/post' next_post.id %}">Próximo</a>
         {% else %}
             <a class="btn btn-outline-secondary rounded-pill disabled" aria-disabled="true">Próximo</a>
         {% endif %}
@@ -61,7 +61,7 @@
           <ul class="list-unstyled">
             {% for post in relateds %}
             <li>
-              <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" href="#">
+              <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" href="{% url 'blog/post/' post.id %}">
                 <div class="col-lg-8">
                   <h6 class="mb-0">{{ post.title }}</h6>
                   <small class="text-body-secondary">{{ post.created_at }}</small>
