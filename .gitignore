@@ -6,6 +6,8 @@ local_settings.py
 
 media
 
+db.sqlite3
+
 venv/
 
 # If your build process includes running collectstatic, then you probably don't need or want to include staticfiles/
